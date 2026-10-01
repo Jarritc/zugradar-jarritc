@@ -1,0 +1,6 @@
+# Zugangsdaten und Betriebsdaten gehören nicht ins Repository
+config.json
+web/_kukas.php
+backend/logs/
+backend/__pycache__/
+*.pyc

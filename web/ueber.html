@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zugradar — über diese Anwendung</title>
+<meta name="description" content="Zugradar: private Anwendung rund um die Marschbahn. Betreiber, Kontakt und verwendete Datenquellen.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<style>
+  :root { color-scheme: light dark; --bg:#f2f4f7; --card:#fff; --line:#e2e6eb; --fg:#151b23;
+          --muted:#5b6674; --link:#0a66d0; --akzent:#8f2029; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0c1117; --card:#161c24; --line:#262e39;
+          --fg:#e6edf3; --muted:#93a1b1; --link:#5aa3f7; } }
+  body { margin:0; padding:24px 16px; background:var(--bg); color:var(--fg);
+         font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+  main { max-width:720px; margin:0 auto; }
+  .karte { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-bottom:16px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:16px; margin:22px 0 8px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+  .unter { color:var(--muted); margin:0 0 18px; }
+  a { color:var(--link); }
+  ul { padding-left:20px; }
+  li { margin-bottom:6px; }
+  .fuss { color:var(--muted); font-size:13.5px; text-align:center; }
+  code { background:var(--bg); padding:1px 5px; border-radius:5px; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="karte">
+    <h1>Zugradar</h1>
+    <p class="unter">Private Anwendung rund um die Marschbahn (Hamburg&nbsp;– Westerland/Sylt),
+      insbesondere die Einsätze der Baureihe&nbsp;218 durch Elmshorn.</p>
+
+    <p>Zugradar ist ein privates Hobbyprojekt für einen einzigen Haushalt. Die Anwendung selbst
+      ist passwortgeschützt und nicht öffentlich; diese Seite gibt es, damit Betreiber,
+      Kontaktweg und Datenquellen trotzdem nachvollziehbar sind.</p>
+
+    <h2>Betreiber und Kontakt</h2>
+    <ul>
+      <li>Betrieben privat unter <a href="https://jarritc.de">jarritc.de</a></li>
+      <li>E-Mail: <a href="mailto:mail@jarritc.de">mail@jarritc.de</a></li>
+    </ul>
+    <p>Bei Fragen oder Beschwerden zur Nutzung einer Schnittstelle genügt eine kurze E-Mail —
+      Anfragen werden umgehend gedrosselt oder eingestellt.</p>
+
+    <h2>Verwendete Daten</h2>
+    <ul>
+      <li><a href="https://transitous.org">transitous.org</a>
+        (<a href="https://transitous.org/sources/">Datenquellen von transitous</a>) — Fahrplan
+        und Echtzeit für die Karte (<code>map/trips</code>, <code>trip</code>, <code>geocode</code>).
+        Abgefragt wird nur, während jemand die Karte geöffnet hat, höchstens alle drei Minuten
+        und nur für Schleswig-Holstein und Hamburg; Antworten werden gzip-komprimiert geholt
+        und auf dem eigenen Server zwischengespeichert, damit mehrere Geräte eine Abfrage teilen.</li>
+      <li>Deutsche Bahn, Timetables-Schnittstelle — Abfahrten und Echtzeit in Elmshorn und an
+        ausgewählten Bahnhöfen.</li>
+      <li><a href="https://www.drehscheibe-online.de/foren/list.php?006">Drehscheibe-Online</a> —
+        die öffentlich einsehbaren Tageslisten der Lokeinsätze auf der Marschbahn.</li>
+      <li><a href="https://dbf.finalrewind.org/">dbf.finalrewind.org</a> — Wagenreihung, nur auf
+        ausdrücklichen Knopfdruck und zwischengespeichert.</li>
+      <li><a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende —
+        Kartenkacheln, Gleisführung und <a href="https://www.openrailwaymap.org/">OpenRailwayMap</a>.</li>
+      <li>Landesgrenzen: GeoBasis-DE / BKG (dl-de/by-2-0) über
+        <a href="https://github.com/isellsoap/deutschlandGeoJSON">deutschlandGeoJSON</a>.</li>
+      <li>Angaben zu einzelnen Lokomotiven: Wikipedia, Artikel „DB-Baureihe 218“.</li>
+    </ul>
+
+    <h2>Kennung der Abfragen</h2>
+    <p><code>Zugradar/1.0 (+https://jarritc.de/zugradar/ueber.html; mail@jarritc.de)</code></p>
+
+    <h2>Quelltext</h2>
+    <p id="quelltext">Der Quelltext wird auf Anfrage herausgegeben; eine öffentliche
+      Veröffentlichung ist in Vorbereitung. Bis dahin genügt eine E-Mail an
+      <a href="mailto:mail@jarritc.de">mail@jarritc.de</a>.</p>
+  </div>
+  <p class="fuss">Zugradar · privat betrieben · <a href="https://jarritc.de">jarritc.de</a></p>
+</main>
+</body>
+</html>

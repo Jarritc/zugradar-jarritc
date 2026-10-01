@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8f2029">
+<title>Zugradar — offline</title>
+<link rel="icon" href="favicon.ico">
+<style>
+  :root { color-scheme: light dark; --bg:#f2f4f7; --card:#fff; --fg:#151b23; --muted:#5b6674; --line:#e2e6eb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0c1117; --card:#161c24; --fg:#e6edf3; --muted:#93a1b1; --line:#262e39; } }
+  body { margin:0; min-height:100dvh; display:grid; place-items:center; padding:24px; background:var(--bg);
+         color:var(--fg); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; text-align:center; }
+  .karte { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:28px 22px; width:min(360px,100%); }
+  img { width:84px; height:84px; }
+  h1 { font-size:19px; margin:12px 0 6px; }
+  p { color:var(--muted); font-size:14px; margin:0 0 16px; }
+  a { color:#8f2029; }
+  button { font:inherit; font-weight:600; border:0; border-radius:10px; padding:12px 20px;
+           background:#8f2029; color:#fff; min-height:46px; }
+</style></head><body>
+<div class="karte">
+  <img src="icon-192.png" alt="">
+  <h1>Gerade keine Verbindung</h1>
+  <p>Diese Seite war noch nicht geladen. Seiten, die du schon geöffnet hattest, zeigt die App
+     auch ohne Netz weiter — oben rechts steht dann <b>Offline</b> mit dem Stand der Anzeige.</p>
+  <p><a href="./">Zur Übersicht</a></p>
+  <button onclick="location.reload()">Nochmal versuchen</button>
+</div>
+</body></html>

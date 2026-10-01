@@ -1,0 +1,87 @@
+{
+  "name": "Zugradar",
+  "short_name": "Zugradar",
+  "description": "Zugradar: Züge live, Lokstandorte, Störungen, Sichtungen und Sonderzüge.",
+  "id": "/zugradar/",
+  "start_url": "/zugradar/",
+  "scope": "/zugradar/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "de",
+  "background_color": "#0c1117",
+  "theme_color": "#8f2029",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nächste 218",
+      "short_name": "Nächste 218",
+      "description": "Die nächste 218 durch Elmshorn",
+      "url": "/zugradar/#naechste",
+      "icons": [
+        {
+          "src": "kurz-218.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Karte",
+      "short_name": "Karte",
+      "description": "Alle Züge live auf der Karte",
+      "url": "/zugradar/?s=karte",
+      "icons": [
+        {
+          "src": "kurz-karte.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "In deiner Nähe",
+      "short_name": "In der Nähe",
+      "description": "Züge, die gleich an dir vorbeifahren",
+      "url": "/zugradar/?naehe=1#naehe",
+      "icons": [
+        {
+          "src": "kurz-naehe.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Live Elmshorn",
+      "short_name": "Live",
+      "description": "Abfahrten und Echtzeit in Elmshorn",
+      "url": "/zugradar/?s=lage",
+      "icons": [
+        {
+          "src": "kurz-live.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

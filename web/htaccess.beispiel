@@ -1,0 +1,25 @@
+# Der Browser soll sw.js und das Manifest bei jedem Öffnen neu prüfen — sonst
+# bleibt eine installierte App bis zu 24 Stunden auf einer alten Version.
+<FilesMatch "^(sw\.js|manifest\.webmanifest)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</FilesMatch>
+# Interne Einbindungen nicht direkt aufrufbar
+<FilesMatch "^_.*\.php$">
+  Require all denied
+</FilesMatch>
+# "geräte.php" (mit Umlaut getippt) → geraete.php
+RewriteEngine On
+RewriteRule ^ger(ä|%C3%A4|\xC3\xA4)te\.php$ https://jarritc.de/zugradar/geraete.php [R=301,L,NE]
+RewriteRule ^geraete$ https://jarritc.de/zugradar/geraete.php [R=301,L]
+# Protokoll-Auszüge (protokolle/*.log): nur über die angemeldete Seite "Logs",
+# nicht direkt abrufbar
+RedirectMatch 404 ^/zugradar/protokolle/
+# GPS für "Mein Standort" auf der Karte: Der vorgeschaltete Proxy schickt seitenweit
+# "Feature-Policy: geolocation 'none'". Chrome richtet sich nach Permissions-Policy, wenn
+# es die gibt — deshalb hier nur für /zugradar/ die eigene Seite (self) erlauben. Mikrofon
+# und Kamera bleiben gesperrt, fremde Seiten/iframes bekommen kein GPS.
+<IfModule mod_headers.c>
+  Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
+</IfModule>

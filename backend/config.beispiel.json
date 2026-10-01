@@ -1,0 +1,130 @@
+{
+  "db": {
+    "host": "localhost",
+    "user": "zugradar",
+    "password": "HIER EINTRAGEN",
+    "database": "zugradar"
+  },
+  "mail": {
+    "api": "HIER EINTRAGEN",
+    "key": "HIER EINTRAGEN",
+    "verify_tls": false,
+    "from_name": "Zugradar",
+    "recipients": [
+      "dein.name@example.org"
+    ]
+  },
+  "forum": {
+    "base": "https://www.drehscheibe-online.de/foren/",
+    "board": "006",
+    "max_pages": 4,
+    "quellen": [
+      "regio",
+      "shuttle"
+    ]
+  },
+  "start_date": "2026-09-01",
+  "recheck_days_back": 2,
+  "recheck_days_forward": 5,
+  "tagesmeldung": true,
+  "fahrplan": {
+    "aktiv": true,
+    "quelle": "transitous (MOTIS / DELFI-Open-Data, kostenlos, ohne Schlüssel)",
+    "stop_id": "de-DELFI_de:01056:97960",
+    "stop_name": "Elmshorn",
+    "verspaetung_ab_minuten": 15,
+    "stoerung_ab_zuegen": 10,
+    "vorlauf_minuten": 120,
+    "nachlauf_minuten": 30,
+    "allgemein_aktiv": true,
+    "allgemein_linien": [
+      "RE6"
+    ],
+    "allgemein_verspaetung_ab": 30,
+    "entwarnung": true,
+    "sperrfrist_minuten": 60,
+    "allgemein_hoechstens_am_tag": 2,
+    "einzelmeldungen_linie": false,
+    "meldung_ab_prioritaet": 1,
+    "stoerung_ab_ausfaellen": 5,
+    "allgemein_nur_an_218_tagen": false,
+    "meldung_nur_bei_grosser_stoerung": true
+  },
+  "db_api": {
+    "basis": "https://apis.deutschebahn.com/db-api-marketplace/apis/timetables/v1",
+    "client_id": "HIER EINTRAGEN",
+    "api_key": "HIER EINTRAGEN",
+    "eva_elmshorn": 8000092
+  },
+  "sichtungen": {
+    "aktiv": true,
+    "umkreis_km": 50,
+    "bretter": [
+      "004",
+      "109",
+      "006"
+    ],
+    "max_beitraege_je_lauf": 8
+  },
+  "aufbewahrung": {
+    "laeufe_log_tage": 30,
+    "stoerungen_tage": 90,
+    "sichtungen_tage": 30,
+    "sichtungen_treffer_tage": 365,
+    "orte_ohne_treffer_tage": 90,
+    "verlauf_tage": 365,
+    "log_max_mb": 5
+  },
+  "nachschlag_je_lauf": 12,
+  "nachtrag": true,
+  "sonderzuege": {
+    "aktiv": true,
+    "vorausschau_stunden": 30,
+    "regel_gattungen": [
+      "RE",
+      "RB",
+      "AKN",
+      "NBE",
+      "IC",
+      "ICE",
+      "EC",
+      "S"
+    ],
+    "forum_stichwoerter": [
+      "Sonderzug",
+      "Sonderfahrt",
+      "Dampf",
+      "Überführung",
+      "Museumszug",
+      "Messzug",
+      "Charter",
+      "Rheingold",
+      "Nostalgie",
+      "Pendelfahrt",
+      "Extrazug",
+      "Salonwagen"
+    ]
+  },
+  "merken": {
+    "geheimnis": "HIER 64 HEX-ZEICHEN EINTRAGEN",
+    "basis_url": "https://example.org/zugradar/merken.php",
+    "intervall_hinweis": "beobachten.py: >5 h vorher stündlich, 5–2 h alle 10 min, ab 2 h alle 5 min",
+    "verspaetung_ab_minuten": 5,
+    "live_meldung": true,
+    "live_ab_minuten": 60,
+    "live_festhalten": true
+  },
+  "push": {
+    "vapid_privat": "HIER EINTRAGEN — erzeugt mit: python3 push.py --schluessel",
+    "vapid_absender": "mailto:dein.name@example.org",
+    "start_url": "https://example.org/zugradar/",
+    "mail_wenn_push_scheitert": true,
+    "vapid_oeffentlich": "HIER EINTRAGEN — erzeugt mit: python3 push.py --schluessel"
+  },
+  "erinnerung": {
+    "aktiv": true,
+    "vorlauf_minuten": 30,
+    "fenster_minuten": 10,
+    "mit_wagenreihung": true
+  }
+}
